@@ -6,8 +6,8 @@ const axios = require('axios');
 const app = express();
 const port = 3000;
 
-// CORS configuration
-const allowedOrigins = ['http://localhost:4200']; // Add other origins as needed
+// Cors policy
+const allowedOrigins = ['http://localhost:4200']; 
 const corsOptions = {
   origin: (origin, callback) => {
     if (allowedOrigins.indexOf(origin) !== -1) {
