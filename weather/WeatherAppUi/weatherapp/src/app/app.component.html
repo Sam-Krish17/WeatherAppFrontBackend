@@ -1,0 +1,27 @@
+<!-- card -->
+<div class="card m-5">
+  <div style="margin:50px;">
+    <!-- input field -->
+    <div class="col-sm-6" style=" margin: 0 auto;float: none;">
+      <form (ngSubmit)="findWeather()">
+<div class=" input-group " id="search">
+        <input type="text" class="form-control"  aria-describedby="button-addon2" [(ngModel)]="city" name="city" >
+        <button class="btn btn-outline-secondary" type="submit" id="button-addon2">search</button>
+    </div>
+      </form>
+      <div *ngIf="weatherData">
+        <div style="text-align: center;">
+          <h2>{{ weatherData.location.country }}</h2>
+          <p>  {{ weatherData.location.name }}</p>
+          <p>Temperature: {{ weatherData.current.temp_c }}°C</p>
+        </div>
+       
+        
+       
+      </div>
+    </div>
+    </div>
+    
+
+</div>
+<router-outlet></router-outlet>
